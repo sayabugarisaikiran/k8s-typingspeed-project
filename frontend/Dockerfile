@@ -5,7 +5,12 @@ WORKDIR /app
 ENV BACKEND_URL=###MONKEYTYPE_BACKENDURL### RECAPTCHA_SITE_KEY=###RECAPTCHA_SITE_KEY###
 
 #COPY
-COPY ["package.json", "package-lock.json", "./"]
+# Copy only package.json first
+COPY package.json ./
+
+# Install git and npm dependencies with legacy-peer-deps flag
+RUN apk add --no-cache git && \
+    npm install --legacy-peer-deps
 
 # Copy the entire frontend directory
 COPY . .
@@ -14,8 +19,7 @@ COPY firebase-config-live.ts src/ts/constants/firebase-config.ts
 COPY firebase-config-live.ts src/ts/constants/firebase-config-live.ts
 
 #build
-RUN npm i --frozen-lockfile && \
-    npm run build
+RUN npm run build
 
 # COPY to target
 FROM nginx:mainline-alpine
