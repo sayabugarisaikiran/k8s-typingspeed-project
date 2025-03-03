@@ -37,7 +37,7 @@ WORKDIR /app/backend/dist
 ## logs 
 RUN mkdir -p /app/backend/dist/logs
 
-COPY ["docker/backend/entry-point.sh", "docker/backend/applyConfig.sh", "./"]
+COPY ["backend/entry-point.sh", "backend/applyConfig.sh", "./"]
 
 #run in dev mode (no anticheat)
 ENV MODE=dev

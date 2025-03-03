@@ -9,8 +9,8 @@ COPY ["package.json", "pnpm-lock.yaml", "pnpm-workspace.yaml", "turbo.json", "./
 COPY packages packages
 COPY frontend frontend
 
-COPY docker/frontend/firebase-config-live.ts frontend/src/ts/constants/firebase-config.ts
-COPY docker/frontend/firebase-config-live.ts frontend/src/ts/constants/firebase-config-live.ts
+COPY frontend/firebase-config-live.ts frontend/src/ts/constants/firebase-config.ts
+COPY frontend/firebase-config-live.ts frontend/src/ts/constants/firebase-config-live.ts
 
 #gimme pnpm + build
 RUN npm i -g pnpm && \
@@ -21,7 +21,7 @@ RUN npm i -g pnpm && \
 FROM nginx:mainline-alpine
 
 COPY --from=builder /app/frontend/dist /usr/share/nginx/html
-COPY docker/frontend/updateConfig.sh /docker-entrypoint.d/updateConfig.sh
+COPY frontend/updateConfig.sh /docker-entrypoint.d/updateConfig.sh
 RUN chmod +x /docker-entrypoint.d/updateConfig.sh
 
 # entry
