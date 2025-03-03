@@ -1,5 +1,5 @@
 {
-  "name": "@monkeytype/util",
+  "name": "../lib/util",
   "private": true,
   "scripts": {
     "dev": "rimraf ./dist && monkeytype-esbuild --watch",

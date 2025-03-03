@@ -1,4 +1,4 @@
-import { CustomBackgroundFilter } from "@monkeytype/contracts/schemas/configs";
+import { CustomBackgroundFilter } from "../lib/contracts/schemas/configs";
 import * as UpdateConfig from "../config";
 import * as ConfigEvent from "../observables/config-event";
 import { debounce } from "throttle-debounce";

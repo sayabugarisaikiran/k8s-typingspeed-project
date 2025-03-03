@@ -1,4 +1,4 @@
-import { ConfigValue } from "@monkeytype/contracts/schemas/configs";
+import { ConfigValue } from "../lib/contracts/schemas/configs";
 
 type SetFunction<T> = (param: T, nosave?: boolean) => boolean;
 

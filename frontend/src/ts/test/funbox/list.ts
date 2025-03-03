@@ -5,7 +5,7 @@ import {
   FunboxMetadata,
   getFunboxObject,
   FunboxProperty,
-} from "@monkeytype/funbox";
+} from "../lib/funbox";
 
 import { FunboxFunctions, getFunboxFunctions } from "./funbox-functions";
 

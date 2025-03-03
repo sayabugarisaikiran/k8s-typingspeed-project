@@ -1,4 +1,4 @@
-import { Configuration } from "@monkeytype/contracts/schemas/configuration";
+import { Configuration } from "../lib/contracts/schemas/configuration";
 import Ape from ".";
 
 let config: Configuration | undefined = undefined;

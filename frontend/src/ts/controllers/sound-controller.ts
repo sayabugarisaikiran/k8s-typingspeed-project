@@ -2,13 +2,13 @@ import Config from "../config";
 import * as ConfigEvent from "../observables/config-event";
 import { createErrorMessage } from "../utils/misc";
 import { randomElementFromArray } from "../utils/arrays";
-import { randomIntFromRange } from "@monkeytype/util/numbers";
+import { randomIntFromRange } from "../lib/util/numbers";
 import { leftState, rightState } from "../test/shift-tracker";
 import { capsState } from "../test/caps-warning";
 import * as Notifications from "../elements/notifications";
 
 import type { Howl } from "howler";
-import { PlaySoundOnClick } from "@monkeytype/contracts/schemas/configs";
+import { PlaySoundOnClick } from "../lib/contracts/schemas/configs";
 
 async function gethowler(): Promise<typeof import("howler")> {
   return await import("howler");

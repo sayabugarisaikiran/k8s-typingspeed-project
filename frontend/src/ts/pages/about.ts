@@ -10,7 +10,7 @@ import * as Skeleton from "../utils/skeleton";
 import {
   TypingStats,
   SpeedHistogram,
-} from "@monkeytype/contracts/schemas/public";
+} from "../lib/contracts/schemas/public";
 import { getNumberWithMagnitude, numberWithSpaces } from "../utils/numbers";
 
 function reset(): void {

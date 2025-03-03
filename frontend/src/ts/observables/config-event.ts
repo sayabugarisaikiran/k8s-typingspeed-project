@@ -1,4 +1,4 @@
-import { Config, ConfigValue } from "@monkeytype/contracts/schemas/configs";
+import { Config, ConfigValue } from "../lib/contracts/schemas/configs";
 
 type SubscribeFunction = (
   key: string,

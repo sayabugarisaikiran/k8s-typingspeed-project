@@ -106,9 +106,9 @@ import * as TestStats from "../test/test-stats";
 import * as QuoteSearchModal from "../modals/quote-search";
 import * as FPSCounter from "../elements/fps-counter";
 import { migrateConfig } from "../utils/config";
-import { PartialConfigSchema } from "@monkeytype/contracts/schemas/configs";
+import { PartialConfigSchema } from "../lib/contracts/schemas/configs";
 import { Command, CommandsSubgroup } from "./types";
-import { parseWithSchema as parseJsonWithSchema } from "@monkeytype/util/json";
+import { parseWithSchema as parseJsonWithSchema } from "../lib/util/json";
 
 const layoutsPromise = JSONData.getLayoutsList();
 layoutsPromise

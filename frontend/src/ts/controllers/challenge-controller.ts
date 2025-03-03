@@ -12,13 +12,13 @@ import * as Loader from "../elements/loader";
 import {
   CustomTextLimitMode,
   CustomTextMode,
-} from "@monkeytype/contracts/schemas/util";
+} from "../lib/contracts/schemas/util";
 import {
   Config as ConfigType,
   Difficulty,
-} from "@monkeytype/contracts/schemas/configs";
-import { Mode } from "@monkeytype/contracts/schemas/shared";
-import { CompletedEvent } from "@monkeytype/contracts/schemas/results";
+} from "../lib/contracts/schemas/configs";
+import { Mode } from "../lib/contracts/schemas/shared";
+import { CompletedEvent } from "../lib/contracts/schemas/results";
 
 let challengeLoading = false;
 

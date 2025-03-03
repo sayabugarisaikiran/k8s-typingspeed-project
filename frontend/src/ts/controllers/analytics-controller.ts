@@ -6,7 +6,7 @@ import {
 } from "firebase/analytics";
 import { app as firebaseApp } from "../firebase";
 import { createErrorMessage } from "../utils/misc";
-import { parseWithSchema as parseJsonWithSchema } from "@monkeytype/util/json";
+import { parseWithSchema as parseJsonWithSchema } from "../lib/util/json";
 import { z } from "zod";
 
 let analytics: AnalyticsType;

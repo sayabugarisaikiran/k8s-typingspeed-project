@@ -1,4 +1,4 @@
-import { roundTo2 } from "@monkeytype/util/numbers";
+import { roundTo2 } from "../lib/util/numbers";
 
 /**
  * Converts seconds to a human-readable string representation of time.

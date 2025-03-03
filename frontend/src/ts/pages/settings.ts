@@ -23,12 +23,12 @@ import * as CustomBackgroundFilter from "../elements/custom-background-filter";
 import {
   ConfigValue,
   CustomLayoutFluid,
-} from "@monkeytype/contracts/schemas/configs";
+} from "../lib/contracts/schemas/configs";
 import {
   getAllFunboxes,
   FunboxName,
   checkCompatibility,
-} from "@monkeytype/funbox";
+} from "../lib/funbox";
 import { getActiveFunboxNames } from "../test/funbox/list";
 
 type SettingsGroups<T extends ConfigValue> = Record<string, SettingsGroup<T>>;

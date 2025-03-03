@@ -1,4 +1,4 @@
-import { ConfigValue } from "@monkeytype/contracts/schemas/configs";
+import { ConfigValue } from "../lib/contracts/schemas/configs";
 import Config from "../../config";
 import * as Notifications from "../notifications";
 import SlimSelect from "slim-select";

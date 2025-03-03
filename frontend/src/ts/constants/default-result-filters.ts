@@ -1,4 +1,4 @@
-import { ResultFilters } from "@monkeytype/contracts/schemas/users";
+import { ResultFilters } from "../lib/contracts/schemas/users";
 import { deepClone } from "../utils/misc";
 
 const object: ResultFilters = {

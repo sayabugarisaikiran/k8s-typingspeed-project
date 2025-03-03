@@ -15,7 +15,7 @@ import {
   DifficultySchema,
   Mode2Schema,
   ModeSchema,
-} from "@monkeytype/contracts/schemas/shared";
+} from "../lib/contracts/schemas/shared";
 import {
   CustomBackgroundFilter,
   CustomBackgroundFilterSchema,
@@ -23,9 +23,9 @@ import {
   CustomBackgroundSizeSchema,
   CustomThemeColors,
   CustomThemeColorsSchema,
-} from "@monkeytype/contracts/schemas/configs";
+} from "../lib/contracts/schemas/configs";
 import { z } from "zod";
-import { parseWithSchema as parseJsonWithSchema } from "@monkeytype/util/json";
+import { parseWithSchema as parseJsonWithSchema } from "../lib/util/json";
 
 export async function linkDiscord(hashOverride: string): Promise<void> {
   if (!hashOverride) return;

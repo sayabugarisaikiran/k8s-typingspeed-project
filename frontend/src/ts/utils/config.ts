@@ -2,10 +2,10 @@ import {
   Config,
   ConfigValue,
   PartialConfig,
-} from "@monkeytype/contracts/schemas/configs";
+} from "../lib/contracts/schemas/configs";
 import DefaultConfig from "../constants/default-config";
 import { typedKeys } from "./misc";
-import * as ConfigSchemas from "@monkeytype/contracts/schemas/configs";
+import * as ConfigSchemas from "../lib/contracts/schemas/configs";
 
 /**
  * migrates possible outdated config and merges with the default config values

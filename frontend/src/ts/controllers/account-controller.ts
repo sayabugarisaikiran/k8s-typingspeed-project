@@ -20,7 +20,7 @@ import * as URLHandler from "../utils/url-handler";
 import * as Account from "../pages/account";
 import * as Alerts from "../elements/alerts";
 import * as AccountSettings from "../pages/account-settings";
-import { getAllFunboxes } from "@monkeytype/funbox";
+import { getAllFunboxes } from "../lib/funbox";
 import {
   GoogleAuthProvider,
   GithubAuthProvider,

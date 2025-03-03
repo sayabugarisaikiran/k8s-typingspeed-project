@@ -1,4 +1,4 @@
-import { intersect } from "@monkeytype/util/arrays";
+import { intersect } from "../lib/util/arrays";
 import { FunboxForcedConfig, FunboxName } from "./types";
 import { getFunbox } from "./list";
 

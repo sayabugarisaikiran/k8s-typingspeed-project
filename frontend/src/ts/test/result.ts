@@ -15,7 +15,7 @@ import * as SlowTimer from "../states/slow-timer";
 import * as DateTime from "../utils/date-and-time";
 import * as Misc from "../utils/misc";
 import * as Strings from "../utils/strings";
-import * as Numbers from "@monkeytype/util/numbers";
+import * as Numbers from "../lib/util/numbers";
 import * as Arrays from "../utils/arrays";
 import { get as getTypingSpeedUnit } from "../utils/typing-speed-units";
 import * as PbCrown from "./pb-crown";
@@ -36,13 +36,13 @@ import type {
   LabelPosition,
 } from "chartjs-plugin-annotation";
 import Ape from "../ape";
-import { CompletedEvent } from "@monkeytype/contracts/schemas/results";
+import { CompletedEvent } from "../lib/contracts/schemas/results";
 import {
   getActiveFunboxes,
   getFromString,
   isFunboxActiveWithProperty,
 } from "./funbox/list";
-import { getFunboxesFromString } from "@monkeytype/funbox";
+import { getFunboxesFromString } from "../lib/funbox";
 
 let result: CompletedEvent;
 let maxChartVal: number;

@@ -1,9 +1,9 @@
-import { PartialConfigSchema } from "@monkeytype/contracts/schemas/configs";
+import { PartialConfigSchema } from "../lib/contracts/schemas/configs";
 import * as UpdateConfig from "../config";
 import * as Notifications from "../elements/notifications";
 import AnimatedModal from "../utils/animated-modal";
 import { migrateConfig } from "../utils/config";
-import { parseWithSchema as parseJsonWithSchema } from "@monkeytype/util/json";
+import { parseWithSchema as parseJsonWithSchema } from "../lib/util/json";
 
 type State = {
   mode: "import" | "export";

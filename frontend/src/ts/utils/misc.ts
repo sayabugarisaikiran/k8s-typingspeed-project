@@ -1,16 +1,16 @@
 import * as Loader from "../elements/loader";
 import { envConfig } from "../constants/env-config";
 import { lastElementFromArray } from "./arrays";
-import { Config } from "@monkeytype/contracts/schemas/configs";
+import { Config } from "../lib/contracts/schemas/configs";
 import {
   Mode,
   Mode2,
   PersonalBests,
-} from "@monkeytype/contracts/schemas/shared";
+} from "../lib/contracts/schemas/shared";
 import {
   CustomTextDataWithTextLen,
   Result,
-} from "@monkeytype/contracts/schemas/results";
+} from "../lib/contracts/schemas/results";
 
 export function whorf(speed: number, wordlen: number): number {
   return Math.min(

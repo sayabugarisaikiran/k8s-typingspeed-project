@@ -28,7 +28,7 @@ import { getHtmlByUserFlags } from "../controllers/user-flag-controller";
 import {
   TimerColor,
   TimerOpacity,
-} from "@monkeytype/contracts/schemas/configs";
+} from "../lib/contracts/schemas/configs";
 import { convertRemToPixels } from "../utils/numbers";
 import {
   findSingleActiveFunboxWithFunction,

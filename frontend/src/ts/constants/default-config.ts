@@ -1,7 +1,7 @@
 import {
   Config,
   CustomThemeColors,
-} from "@monkeytype/contracts/schemas/configs";
+} from "../lib/contracts/schemas/configs";
 import { deepClone } from "../utils/misc";
 
 const obj = {

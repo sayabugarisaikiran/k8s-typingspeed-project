@@ -8,7 +8,7 @@ import * as LiveWpm from "./live-speed";
 import * as TestStats from "./test-stats";
 import * as TestInput from "./test-input";
 import * as Monkey from "./monkey";
-import * as Numbers from "@monkeytype/util/numbers";
+import * as Numbers from "../lib/util/numbers";
 import * as Notifications from "../elements/notifications";
 import * as Caret from "./caret";
 import * as SlowTimer from "../states/slow-timer";

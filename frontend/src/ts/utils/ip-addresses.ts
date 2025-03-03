@@ -1,4 +1,4 @@
-import { randomIntFromRange } from "@monkeytype/util/numbers";
+import { randomIntFromRange } from "../lib/util/numbers";
 
 function getRandomIPvXaddress(
   bits: number,

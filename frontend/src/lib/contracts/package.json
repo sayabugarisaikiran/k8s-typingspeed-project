@@ -1,5 +1,5 @@
 {
-  "name": "@monkeytype/contracts",
+  "name": "../lib/contracts",
   "private": true,
   "scripts": {
     "dev": "rimraf ./dist && monkeytype-esbuild --watch",

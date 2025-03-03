@@ -6,7 +6,7 @@ import * as Strings from "../utils/strings";
 import * as Misc from "../utils/misc";
 import * as Arrays from "../utils/arrays";
 import * as JSONData from "../utils/json-data";
-import * as Numbers from "@monkeytype/util/numbers";
+import * as Numbers from "../lib/util/numbers";
 import * as Notifications from "../elements/notifications";
 import * as CustomText from "./custom-text";
 import * as CustomTextState from "../states/custom-text-name";
@@ -57,19 +57,19 @@ import * as KeymapEvent from "../observables/keymap-event";
 import * as LayoutfluidFunboxTimer from "../test/funbox/layoutfluid-funbox-timer";
 import * as ArabicLazyMode from "../states/arabic-lazy-mode";
 import Format from "../utils/format";
-import { QuoteLength } from "@monkeytype/contracts/schemas/configs";
-import { Mode } from "@monkeytype/contracts/schemas/shared";
+import { QuoteLength } from "../lib/contracts/schemas/configs";
+import { Mode } from "../lib/contracts/schemas/shared";
 import {
   CompletedEvent,
   CustomTextDataWithTextLen,
-} from "@monkeytype/contracts/schemas/results";
+} from "../lib/contracts/schemas/results";
 import * as XPBar from "../elements/xp-bar";
 import {
   findSingleActiveFunboxWithFunction,
   getActiveFunboxes,
   getActiveFunboxesWithFunction,
 } from "./funbox/list";
-import { getFunboxesFromString } from "@monkeytype/funbox";
+import { getFunboxesFromString } from "../lib/funbox";
 import * as CompositionState from "../states/composition";
 
 let failReason = "";

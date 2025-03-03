@@ -8,7 +8,7 @@ import {
   Mode,
   Mode2,
   PersonalBest,
-} from "@monkeytype/contracts/schemas/shared";
+} from "../lib/contracts/schemas/shared";
 
 type PBWithMode2 = {
   mode2: Mode2<Mode>;

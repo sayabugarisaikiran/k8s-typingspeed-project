@@ -13,7 +13,7 @@ import Page from "./page";
 import * as DateTime from "../utils/date-and-time";
 import * as Misc from "../utils/misc";
 import * as Arrays from "../utils/arrays";
-import * as Numbers from "@monkeytype/util/numbers";
+import * as Numbers from "../lib/util/numbers";
 import { get as getTypingSpeedUnit } from "../utils/typing-speed-units";
 import * as Profile from "../elements/profile";
 import { format } from "date-fns/format";
@@ -27,14 +27,14 @@ import * as Loader from "../elements/loader";
 import * as ResultBatches from "../elements/result-batches";
 import Format from "../utils/format";
 import * as TestActivity from "../elements/test-activity";
-import { ChartData } from "@monkeytype/contracts/schemas/results";
+import { ChartData } from "../lib/contracts/schemas/results";
 import {
   Difficulty,
   Mode,
   Mode2,
   Mode2Custom,
-} from "@monkeytype/contracts/schemas/shared";
-import { ResultFiltersGroupItem } from "@monkeytype/contracts/schemas/users";
+} from "../lib/contracts/schemas/shared";
+import { ResultFiltersGroupItem } from "../lib/contracts/schemas/users";
 import { findLineByLeastSquares } from "../utils/numbers";
 import defaultResultFilters from "../constants/default-result-filters";
 

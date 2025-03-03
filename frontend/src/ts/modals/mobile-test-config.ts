@@ -6,8 +6,8 @@ import * as CustomTestDurationPopup from "./custom-test-duration";
 import * as QuoteSearchModal from "./quote-search";
 import * as CustomTextPopup from "./custom-text";
 import AnimatedModal from "../utils/animated-modal";
-import { QuoteLength } from "@monkeytype/contracts/schemas/configs";
-import { Mode } from "@monkeytype/contracts/schemas/shared";
+import { QuoteLength } from "../lib/contracts/schemas/configs";
+import { Mode } from "../lib/contracts/schemas/shared";
 
 function update(): void {
   const el = $("#mobileTestConfigModal");

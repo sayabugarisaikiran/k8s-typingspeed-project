@@ -7,7 +7,7 @@ import * as ConnectionState from "../states/connection";
 import AnimatedModal from "../utils/animated-modal";
 import * as Profile from "../elements/profile";
 import { CharacterCounter } from "../elements/character-counter";
-import { Badge, UserProfileDetails } from "@monkeytype/contracts/schemas/users";
+import { Badge, UserProfileDetails } from "../lib/contracts/schemas/users";
 
 export function show(): void {
   if (!ConnectionState.get()) {

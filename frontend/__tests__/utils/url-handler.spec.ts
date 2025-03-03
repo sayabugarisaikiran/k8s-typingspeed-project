@@ -1,4 +1,4 @@
-import { Difficulty, Mode, Mode2 } from "@monkeytype/contracts/schemas/shared";
+import { Difficulty, Mode, Mode2 } from "../lib/contracts/schemas/shared";
 import { compressToURI } from "lz-ts";
 import * as UpdateConfig from "../../src/ts/config";
 import * as Notifications from "../../src/ts/elements/notifications";

@@ -20,17 +20,17 @@ import {
   User,
   UserProfileDetails,
   UserTag,
-} from "@monkeytype/contracts/schemas/users";
-import { Config, Difficulty } from "@monkeytype/contracts/schemas/configs";
+} from "../lib/contracts/schemas/users";
+import { Config, Difficulty } from "../lib/contracts/schemas/configs";
 import {
   Mode,
   Mode2,
   PersonalBest,
   PersonalBests,
-} from "@monkeytype/contracts/schemas/shared";
-import { Preset } from "@monkeytype/contracts/schemas/presets";
+} from "../lib/contracts/schemas/shared";
+import { Preset } from "../lib/contracts/schemas/presets";
 import defaultSnapshot from "./constants/default-snapshot";
-import { Result } from "@monkeytype/contracts/schemas/results";
+import { Result } from "../lib/contracts/schemas/results";
 import { FunboxMetadata } from "../../../packages/funbox/src/types";
 
 export type SnapshotUserTag = UserTag & {

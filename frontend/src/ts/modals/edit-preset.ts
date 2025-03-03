@@ -9,7 +9,7 @@ import AnimatedModal from "../utils/animated-modal";
 import {
   PresetType,
   PresetTypeSchema,
-} from "@monkeytype/contracts/schemas/presets";
+} from "../lib/contracts/schemas/presets";
 import { getPreset } from "../controllers/preset-controller";
 import defaultConfig from "../constants/default-config";
 import {
@@ -18,7 +18,7 @@ import {
   ConfigGroupsLiteral,
   ConfigKey,
   Config as ConfigType,
-} from "@monkeytype/contracts/schemas/configs";
+} from "../lib/contracts/schemas/configs";
 
 const state = {
   presetType: "full" as PresetType,

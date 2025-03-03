@@ -7,16 +7,16 @@ import * as Notifications from "../notifications";
 import Ape from "../../ape/index";
 import * as Loader from "../loader";
 import SlimSelect from "slim-select";
-import { QuoteLength } from "@monkeytype/contracts/schemas/configs";
+import { QuoteLength } from "../lib/contracts/schemas/configs";
 import {
   ResultFilters,
   ResultFiltersSchema,
   ResultFiltersGroup,
   ResultFiltersGroupItem,
-} from "@monkeytype/contracts/schemas/users";
+} from "../lib/contracts/schemas/users";
 import { LocalStorageWithSchema } from "../../utils/local-storage-with-schema";
 import defaultResultFilters from "../../constants/default-result-filters";
-import { getAllFunboxes } from "@monkeytype/funbox";
+import { getAllFunboxes } from "../lib/funbox";
 
 export function mergeWithDefaultFilters(
   filters: Partial<ResultFilters>

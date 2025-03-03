@@ -1,6 +1,7 @@
 import { defineConfig, mergeConfig } from "vite";
 import injectHTML from "vite-plugin-html-inject";
 import autoprefixer from "autoprefixer";
+import path from "path";
 import "dotenv/config";
 import PROD_CONFIG from "./vite.config.prod";
 import DEV_CONFIG from "./vite.config.dev";
@@ -34,9 +35,8 @@ const BASE_CONFIG = {
     port: 3000,
     host: process.env.BACKEND_URL !== undefined,
     watch: {
-      //we rebuild the whole contracts package when a file changes
-      //so we only want to watch one file
-      ignored: [/.*\/packages\/contracts\/dist\/(?!configs).*/],
+      // No need to watch the contracts package anymore since it's part of the project
+      ignored: [],
     },
   },
   clearScreen: false,
@@ -52,6 +52,14 @@ const BASE_CONFIG = {
   optimizeDeps: {
     include: ["jquery"],
     exclude: ["@fortawesome/fontawesome-free"],
+  },
+  resolve: {
+    alias: {
+      // Add aliases for the moved packages
+      '@monkeytype/contracts': path.resolve(__dirname, './src/lib/contracts'),
+      '@monkeytype/funbox': path.resolve(__dirname, './src/lib/funbox'),
+      '@monkeytype/util': path.resolve(__dirname, './src/lib/util'),
+    }
   },
 };
 

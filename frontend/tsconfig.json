@@ -1,14 +1,22 @@
 {
-  "extends": "@monkeytype/typescript-config/base.json",
+  "extends": "./config/typescript/base.json",
   "compilerOptions": {
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
-    "types": ["vite/client", "node", "jquery"],
+    "types": ["vite/client", "node", "jquery", "vitest/globals"],
     "moduleResolution": "Bundler",
     "module": "ESNext",
     "allowUmdGlobalAccess": true,
     "target": "ES6",
-    "noEmit": true
+    "noEmit": true,
+    "paths": {
+      "@monkeytype/contracts/*": ["./src/lib/contracts/*"],
+      "@monkeytype/funbox/*": ["./src/lib/funbox/*"],
+      "@monkeytype/util/*": ["./src/lib/util/*"],
+      "@monkeytype/contracts": ["./src/lib/contracts"],
+      "@monkeytype/funbox": ["./src/lib/funbox"],
+      "@monkeytype/util": ["./src/lib/util"]
+    }
   },
-  "include": ["./src/**/*.ts", "./scripts/**/*.ts"],
-  "exclude": ["node_modules", "build", "setup-tests.ts", "**/*.spec.ts"]
+  "include": ["./src/**/*.ts", "./scripts/**/*.ts", "./setup-tests.ts", "**/*.spec.ts"],
+  "exclude": ["node_modules", "build"]
 }

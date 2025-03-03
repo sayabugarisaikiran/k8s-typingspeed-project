@@ -5,24 +5,21 @@ WORKDIR /app
 ENV BACKEND_URL=###MONKEYTYPE_BACKENDURL### RECAPTCHA_SITE_KEY=###RECAPTCHA_SITE_KEY###
 
 #COPY
-COPY ["package.json", "pnpm-lock.yaml", "pnpm-workspace.yaml", "turbo.json", "./"]
-COPY packages packages
-COPY frontend frontend
+COPY ["package.json", "package-lock.json", "./"]
 
-COPY frontend/firebase-config-live.ts frontend/src/ts/constants/firebase-config.ts
-COPY frontend/firebase-config-live.ts frontend/src/ts/constants/firebase-config-live.ts
+# Copy the entire frontend directory
+COPY . .
 
-#gimme pnpm + build
-RUN npm i -g pnpm && \
-    pnpm i --frozen-lockfile && \
+COPY firebase-config-live.ts src/ts/constants/firebase-config.ts
+COPY firebase-config-live.ts src/ts/constants/firebase-config-live.ts
+
+#build
+RUN npm i --frozen-lockfile && \
     npm run build
 
 # COPY to target
 FROM nginx:mainline-alpine
 
-COPY --from=builder /app/frontend/dist /usr/share/nginx/html
-COPY frontend/updateConfig.sh /docker-entrypoint.d/updateConfig.sh
+COPY --from=builder /app/dist /usr/share/nginx/html
+COPY updateConfig.sh /docker-entrypoint.d/updateConfig.sh
 RUN chmod +x /docker-entrypoint.d/updateConfig.sh
-
-# entry
-#CMD ["./entryPoint.sh"]

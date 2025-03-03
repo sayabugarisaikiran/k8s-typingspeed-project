@@ -3,14 +3,14 @@ import * as Skeleton from "../utils/skeleton";
 import {
   LeaderboardEntry,
   XpLeaderboardEntry,
-} from "@monkeytype/contracts/schemas/leaderboards";
+} from "../lib/contracts/schemas/leaderboards";
 import { capitalizeFirstLetter } from "../utils/strings";
 import Ape from "../ape";
 import {
   Mode,
   Mode2Schema,
   ModeSchema,
-} from "@monkeytype/contracts/schemas/shared";
+} from "../lib/contracts/schemas/shared";
 import * as Notifications from "../elements/notifications";
 import Format from "../utils/format";
 import { Auth, isAuthenticated } from "../firebase";
@@ -30,11 +30,11 @@ import {
   getCurrentWeekTimestamp,
   getLastWeekTimestamp,
   getStartOfDayTimestamp,
-} from "@monkeytype/util/date-and-time";
+} from "../lib/util/date-and-time";
 import { formatDistanceToNow } from "date-fns/formatDistanceToNow";
 import { z } from "zod";
 import { LocalStorageWithSchema } from "../utils/local-storage-with-schema";
-import { LanguageSchema } from "@monkeytype/contracts/schemas/util";
+import { LanguageSchema } from "../lib/contracts/schemas/util";
 // import * as ServerConfiguration from "../ape/server-configuration";
 
 const LeaderboardTypeSchema = z.enum(["allTime", "weekly", "daily"]);

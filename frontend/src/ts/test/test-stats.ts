@@ -4,11 +4,11 @@ import * as Strings from "../utils/strings";
 import * as TestInput from "./test-input";
 import * as TestWords from "./test-words";
 import * as TestState from "./test-state";
-import * as Numbers from "@monkeytype/util/numbers";
+import * as Numbers from "../lib/util/numbers";
 import {
   CompletedEvent,
   IncompleteTest,
-} from "@monkeytype/contracts/schemas/results";
+} from "../lib/contracts/schemas/results";
 import { isFunboxActiveWithProperty } from "./funbox/list";
 
 type CharCount = {

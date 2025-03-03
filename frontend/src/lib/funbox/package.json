@@ -1,5 +1,5 @@
 {
-  "name": "@monkeytype/funbox",
+  "name": "../lib/funbox",
   "private": true,
   "scripts": {
     "dev": "rimraf ./dist && monkeytype-esbuild --watch",
@@ -20,7 +20,7 @@
     "vitest": "2.1.9"
   },
   "dependencies": {
-    "@monkeytype/util": "workspace:*"
+    "../lib/util": "workspace:*"
   },
   "exports": {
     ".": {

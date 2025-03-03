@@ -1,4 +1,4 @@
-import { Config } from "@monkeytype/contracts/schemas/configs";
+import { Config } from "../lib/contracts/schemas/configs";
 import AnimatedModal from "../utils/animated-modal";
 
 // this file is needed becauase otherwise it would produce a circular dependency

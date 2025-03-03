@@ -3,7 +3,7 @@ import DefaultConfig from "../../src/ts/constants/default-config";
 import {
   PartialConfig,
   ShowAverageSchema,
-} from "@monkeytype/contracts/schemas/configs";
+} from "../lib/contracts/schemas/configs";
 
 describe("config.ts", () => {
   describe("migrateConfig", () => {

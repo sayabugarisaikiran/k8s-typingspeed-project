@@ -3,10 +3,10 @@ import {
   CustomTextLimitModeSchema,
   CustomTextMode,
   CustomTextModeSchema,
-} from "@monkeytype/contracts/schemas/util";
+} from "../lib/contracts/schemas/util";
 import { LocalStorageWithSchema } from "../utils/local-storage-with-schema";
 import { z } from "zod";
-import { CustomTextDataWithTextLen } from "@monkeytype/contracts/schemas/results";
+import { CustomTextDataWithTextLen } from "../lib/contracts/schemas/results";
 
 const CustomTextObjectSchema = z.record(z.string(), z.string());
 type CustomTextObject = z.infer<typeof CustomTextObjectSchema>;
