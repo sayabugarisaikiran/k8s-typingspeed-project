@@ -13,7 +13,7 @@ services:
       monkeytype-backend:
         condition: service_healthy
     env_file:
-      - path: ./.env
+      - path: ./example.env
         required: true
     environment:
       - FIREBASE_APIKEY=${FIREBASE_APIKEY:-}
